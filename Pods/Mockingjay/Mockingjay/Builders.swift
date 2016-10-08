@@ -16,12 +16,11 @@ public func failure(error:NSError) -> (request:NSURLRequest) -> Response {
 }
 
 public func http(status:Int = 200, headers:[String:String]? = nil, data:NSData? = nil) -> (request:NSURLRequest) -> Response {
-  
   return { (request:NSURLRequest) in
     if let response = NSHTTPURLResponse(URL: request.URL!, statusCode: status, HTTPVersion: nil, headerFields: headers) {
       return Response.Success(response, data)
     }
-    
+
     return .Failure(NSError(domain: NSInternalInconsistencyException, code: 0, userInfo: [NSLocalizedDescriptionKey: "Failed to construct response for stub."]))
   }
 }

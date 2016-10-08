@@ -14,16 +14,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>DATAFilter.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>DATAObjectIDs.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>DATAStack.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -39,22 +29,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>NSDictionary-ANDYSafeValue.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>NSEntityDescription-SYNCPrimaryKey.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>NSManagedObject-HYPPropertyMapper.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>NSString-HYPNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -102,17 +77,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2E555C99AAEE4B41F64444A4C953E6FA</key>
+		<key>0B3D880F0A2AF47483F39A7E86C6C11C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3354D5442C5F85B5C04BA84D9D8B422A</key>
+		<key>1112574580161FAA1FB31608A64E68BA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4ED67E68655AEB2DAAA07DFC26293E31</key>
+		<key>6BFE85D6FD07572164E4EB15D194E13F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,47 +107,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7F5C859C93F33FC914CA2FD500AA0FE8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>88FC39F665DBA7D2DB68299A26F91A30</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8B4B9E0E2F07D4DE8E00466C3E568D55</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>927CB5CF75D91145A23163D22141BDE0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>92943306EC8070DF9CD02ECD505D2CD5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9B68B05DDD475AB30BAA947E900745CD</key>
+		<key>B76B08BBD1294C4F50E5A48D81146233</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9D3D5F7E825AAC64584DBF4EDB9CEB95</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C65DC9D8276F47F56B7E8A7817882F79</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D4FF82403435D8C573D6E932108C5301</key>
+		<key>BFD61639D1B9419DD5EDF9B150D07A71</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -182,7 +127,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F34F210AABA25AE6322388CA89E1B4ED</key>
+		<key>E680B24A637403C4EAA4B774A7B163C8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EFECD163F25DAD4D19CEC9F4B4E56EA2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

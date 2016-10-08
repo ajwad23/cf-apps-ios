@@ -85,14 +85,9 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/DATAFilter/DATAFilter.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/DATAObjectIDs/DATAObjectIDs.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DATAStack/DATAStack.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Locksmith/Locksmith.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/NSDictionary-ANDYSafeValue/NSDictionary_ANDYSafeValue.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/NSEntityDescription-SYNCPrimaryKey/NSEntityDescription_SYNCPrimaryKey.framework"
   install_framework "$BUILT_PRODUCTS_DIR/NSManagedObject-HYPPropertyMapper/NSManagedObject_HYPPropertyMapper.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/NSString-HYPNetworking/NSString_HYPNetworking.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ProtocolBuffers-Swift/ProtocolBuffers.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftWebSocket/SwiftWebSocket.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON/SwiftyJSON.framework"
@@ -102,14 +97,9 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/DATAFilter/DATAFilter.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/DATAObjectIDs/DATAObjectIDs.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DATAStack/DATAStack.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Locksmith/Locksmith.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/NSDictionary-ANDYSafeValue/NSDictionary_ANDYSafeValue.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/NSEntityDescription-SYNCPrimaryKey/NSEntityDescription_SYNCPrimaryKey.framework"
   install_framework "$BUILT_PRODUCTS_DIR/NSManagedObject-HYPPropertyMapper/NSManagedObject_HYPPropertyMapper.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/NSString-HYPNetworking/NSString_HYPNetworking.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ProtocolBuffers-Swift/ProtocolBuffers.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftWebSocket/SwiftWebSocket.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON/SwiftyJSON.framework"

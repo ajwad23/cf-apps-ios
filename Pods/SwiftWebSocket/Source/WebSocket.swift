@@ -992,9 +992,12 @@ private class InnerWebSocket: Hashable {
         } else {
             req.setValue("\(req.URL!.host!):\(req.URL!.port!.integerValue)", forHTTPHeaderField: "Host")
         }
-        req.setValue(req.URL!.absoluteString, forHTTPHeaderField: "Origin")
+        let origin = req.valueForHTTPHeaderField("Origin")
+        if origin == nil || origin! == ""{
+            req.setValue(req.URL!.absoluteString, forHTTPHeaderField: "Origin")
+        }
         if subProtocols.count > 0 {
-            req.setValue(subProtocols.joinWithSeparator(";"), forHTTPHeaderField: "Sec-WebSocket-Protocol")
+            req.setValue(subProtocols.joinWithSeparator(","), forHTTPHeaderField: "Sec-WebSocket-Protocol")
         }
         if req.URL!.scheme != "wss" && req.URL!.scheme != "ws" {
             throw WebSocketError.InvalidAddress
@@ -1666,17 +1669,22 @@ public class WebSocket: NSObject {
     }
     /// Create a WebSocket connection from an NSURLRequest; Also include a list of protocols.
     public init(request: NSURLRequest, subProtocols : [String] = []){
-        opened = true
-        ws = InnerWebSocket(request: request, subProtocols: subProtocols, stub: false)
+        let hasURL = request.URL != nil
+        opened = hasURL
+        ws = InnerWebSocket(request: request, subProtocols: subProtocols, stub: !hasURL)
+        super.init()
+        // weak/strong pattern from:
+        // http://stackoverflow.com/a/17105368/424124
+        // https://dhoerl.wordpress.com/2013/04/23/i-finally-figured-out-weakself-and-strongself/
+        ws.eclose = { [weak self] in
+            if let strongSelf = self {
+                strongSelf.opened = false
+            }
+        }
     }
     /// Create a WebSocket object with a deferred connection; the connection is not opened until the .open() method is called.
-    public override init(){
-        opened = false
-        ws = InnerWebSocket(request: NSURLRequest(), subProtocols: [], stub: true)
-        super.init()
-        ws.eclose = {
-            self.opened = false
-        }
+    public convenience override init(){
+        self.init(request: NSURLRequest(), subProtocols: [])
     }
     /// The URL as resolved by the constructor. This is always an absolute URL. Read only.
     public var url : String{ return ws.url }
